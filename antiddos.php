@@ -158,7 +158,7 @@ switch(readCookie('challenge')) {
 
 <?php
 		if(isset($_POST['captcha-check'])){
-		define('hcaptcha_secretkey', ''); # INSERT YOUR HCAPTCHA SECRET KEY
+		define('hcaptcha_secretkey', ''); # HCAPTCHA SECRET ANAHTARINIZI GiRiN
 		$verifyResponse = file_get_contents('https://hcaptcha.com/siteverify?secret='.hcaptcha_secretkey.'&response='.$_POST['h-captcha-response'].'&remoteip='.$_SERVER['REMOTE_ADDR']);
         $responseData = json_decode($verifyResponse);
         if($responseData->success) {
